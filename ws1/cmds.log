@@ -1,0 +1,86 @@
+    1  passwd
+    2  wget www.github.com
+    3  cd ~/Desktop
+    4  mkdir ws1
+    5  ls
+    6  cd ws1
+    7  git init
+    8  wget www.github.com
+    9  mkdir ws1
+   10  ls
+   11  rm index.jtml.l
+   12  rm index.html.1
+   13  ls
+   14  cd ws1
+   15  git init
+   16  ls
+   17  history > cmds.log
+   18  ls
+   19  git status
+   20  git add cmds.log
+   21  git status
+   22  git commit -m "ws1 cmds.log commit"
+   23  git config --global user.email "peterguilhametjr@gmail.com"
+   24  git config --global user.name "peterguilhametjr"
+   25  git commit -m "ws1 cmds.log commit"
+   26  git branch master my-new-branch
+   27  git branch my-new-branch
+   28  git branch
+   29  git checkout -b my-new-branch
+   30  rm my-new-branch
+   31  git checkout my-new-branch
+   32  git branch
+   33  git remote add origin https://github.com/peterguilhametjr/cs131.git
+   34  git push -u origin master
+   35  git push origin my-new-branch
+   36  git status
+   37  cd
+   38  git init
+   39  ls
+   40  git status
+   41  git add ws1/
+   42  git status
+   43  commit -m "commit ws1 directory"
+   44  git commit -m "commit ws1 directory"
+   45  git branch
+   46  git remote add origin https://github.com/peterguilhametjr/cs131.git
+   47  git push -u origin master
+   48  cd ws1
+   49  rm -fr .git
+   50  git status
+   51  .git
+   52  rm -rf .git
+   53  git status
+   54  ls
+   55  git init
+   56  rm -rf .git
+   57  git status
+   58  cd
+   59  git init
+   60  git status
+   61  ls
+   62  git push -u origin master
+   63  cd ws1
+   64  cd
+   65  rm -rf .git
+   66  git status
+   67  cd ws1
+   68  git status
+   69  ls
+   70  rm cmds.log
+   71  ls
+   72  cd
+   73  ls
+   74  rm index.html
+   75  ls
+   76  rm ws1
+   77  rmdir ws1
+   78  ls
+   79  cd
+   80  ls
+   81  rm -rf .git
+   82  git status
+   83  mkdir ws1
+   84  ls
+   85  cd ws1
+   86  history > cmds.log
