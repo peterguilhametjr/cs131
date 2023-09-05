@@ -1,0 +1,6 @@
+  296  cp /datasets/taxidata.tar.gz .
+  297  tar zxvf taxidata.tar.gz
+  318  cd taxidata
+  319  egrep '.*,.*,"2019-03-12.*' 2019-03.csv | tail -n 20 > results.txt
+  320  egrep '.*,.*,"2019-03-12.*' 2019-03.csv | wc -l >> results.txt
+  321  history > cmds.log
