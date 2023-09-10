@@ -1,0 +1,6 @@
+  367  cut -d ',' -f 8 2019-01.csv | egrep '[0-9.]+' | sort | uniq -c | sort -nr | head -3 > ws3.txt
+  368  ls
+  369  vim ws3.txt
+  370  cut -d ',' -f 8 2019-02.csv | egrep '[0-9.]+' | sort | uniq -c | sort -nr | head -3 >> ws3.txt
+  371  vim ws3.txt
+  378  history > cmds.log
