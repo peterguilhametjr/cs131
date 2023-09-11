@@ -1,0 +1,38 @@
+1) Make a directory a1 under your home directory and change to it. All your homework for this assignment will be done there.
+mkdir a1
+cd a1
+
+2) What is your home directory path?  How did you find out (commands used)?
+/mnt/scratch/peter23fa (echo $HOME)
+
+3) What is your UID?  To what group(s) do you belong?  How did you find out (command used)?
+1137 (id -u)
+peter23fa (id -Gn)
+
+4) Create a new directory "temp". Now remove execute permission for yourself. From this temp directory (see chmod man page), are you allowed to cd in that directory? Can you "ls" it?  Can you "ls -l" it? Can you create files under it?
+I am unable to cd in that directory, I cannot “ls” it, I cannot “ls -l” it, nor can I create files under it.
+
+5) Create a new directory "temp2". Are you allowed to "mv" the directory to "temp3"?  
+    Are you allowed to "cp" a directory?  If you want to cp an entire directory, how would you do it?
+Yes I can mv temp2 to temp3. I can also “cp” a directory, but you need to use the -r option with the cp command. So in this case, it would look something like this: cp -r temp3 temp4
+
+6) Using only "ls" (and maybe "grep"), can you find out which file under
+    directory /proc/ contains information about memory (mem) on your
+    server? Which file contains information about the cpu's on your server?
+Once changed into the /proc/ directory, I used ls | grep cpu & ls | grep mem to find the two files: cpuinfo and meminfo.
+
+7) Use head to check the memory information file you found above.
+    How much total memory is on your server?
+73080512 kB.
+
+8) Then use head, tail, cat to check the cpu information file you found above.
+    How many processors are on your server? What is the processor
+    architecture name? What is the processor speed in GHz?
+255 processors on my server, processor architecture name: POWER8, processor speed: 3425.0MHz -> 3.425GHz
+
+9) Identify the operating system version. Which file under /etc/ contains this information?
+Operating system version: Red Hat Enterprise Linux version 8.6 (Ootpa). os-release was the file that contained this info.
+
+10) What is the permission (given to all users) for the file containing the OS version information
+Readable, writable, and executable are the permissions given to all users for the file containing the OS version information.
+

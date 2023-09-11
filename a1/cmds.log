@@ -1,0 +1,151 @@
+Task 1:  
+  428  mkdir a1
+  429  cd a1
+  430  vim a1.txt
+
+Task 2:
+  431  cd
+  432  echo $HOME
+  433  cd a1
+  434  vim a1.txt
+
+Task 3:
+  435  id -u
+  436  id -Gn
+  437  vim a1.txt
+  438  id -G
+  439  id -Gn | id -u
+  440  groups
+
+Task 4:
+  441  mkdir temp
+  442  chmod temp
+  443  chmod -x temp
+  444  cd temp
+  445  ls temp
+  446  rmdir temp
+  447  ls
+  448  mkdir temp
+  449  cd temp
+  450  chmod -x
+  451  chmod -x .
+  452  cd
+  453  ls
+  454  cd ws3
+  455  ls
+  456  cd
+  457  cd a1
+  458  ls
+  459  cd temp
+  460  chmod u+x temp
+  461  cd temp
+  462  vim a.txt
+  463  vim b.txt
+  464  chmod -x .
+  465  mkdir tempsub
+  466  ls
+  467  ls -l
+  468  vim c.txt
+  469  chmod u+x .
+  470  cd
+  471  cd a1
+  472  chmod u+x temp
+  473  cd temp
+  474  ls
+  475  chmod -x .
+  476  touch c.txt
+  477  cd
+  478  cd a1
+  479  ls
+
+Task 5:
+  480  mkdir temp2
+  481  mv temp2 temp3
+  482  ls
+  483  cd temp3
+  484  ls
+  485  cd temp2
+  486  cd
+  487  cd a1
+  488  ls
+  489  mkdir temp2
+  490  ls
+  491  mv temp2 temp3
+  492  ls
+  493  cd temp3
+  494  ls
+  495  cd
+  496  cd a1
+  497  ls
+  498  rmdir temp3
+  499  rm -r temp3
+  500  ls
+  501  mkdir temp2
+  502  ls
+  503  mv temp2 temp3
+  504  ls
+  505  cd temp3
+  506  ls
+  507  cd
+  508  cd a1
+  509  ls
+  510  cp temp3 temp2
+  511  cp -r temp3 temp2
+  512  ls
+  513  rm temp2
+  514  rmdir temp2
+  515  ls
+  516  cd temp3
+  517  touch d.txt
+  518  ls
+  519  vim d.txt
+  520  cd ..
+  521  ls
+  522  cp -r temp3 temp2
+  523  ls
+  524  cd temp2
+  525  ls
+  526  vim d.txt
+  527  cd ..
+
+Task 6:
+  528  ls /proc/ | grep mem
+  529  ls /proc/ | grep cpu
+  530  cd /proc/
+  531  ls
+  532  grep cpu
+  533  ls grep cpu
+  534  ls | grep cpu
+  535  ls | grep mem
+
+Task 7:
+  536  head meminfo
+  537  tail meminfo
+  538  cat meminfo
+
+Task 8:
+  539  head cpuinfo
+  540  cat cpuinfo
+  541  cpuinfo tail
+  542  tail cpuinfo
+  543  cat /proc/cpuinfo | grep "model name" | head -1
+  544  cat cpuinfo | grep "model name" | head -1
+  545  cd ..
+  546  cd
+  547  ls
+  548  cd a1
+
+Task 9:
+  549  ls
+  550  cd /etc/
+  551  ls
+  552  cat os-release
+
+Task 10:
+  553  ls -l os-release
+  554  cd ..
+  555  cd
+  556  ls
+  557  cd a1
+  558  ls
+  559  history > cmds.log
