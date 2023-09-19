@@ -1,0 +1,20 @@
+Script started on 2023-09-17 19:22:02-04:00
+bash-4.4$ l
+total 0
+-rw-rw-r-- 1 peter23fa peter23fa 0 Sep 17 19:22 ws4.txt
+bash-4.4$ w
+      2      11      64
+bash-4.4$ ls -ltr
+total 0
+-rw-rw-r-- 1 peter23fa peter23fa 0 Sep 17 19:22 ws4.txt
+bash-4.4$ ls -l | wc
+      2      11      64
+bash-4.4$ exit
+
+Script done on 2023-09-17 19:22:41-04:00
+
+145.0-145.0.txt average:
+5.58
+
+262.0-263.0.txt average:
+4.96

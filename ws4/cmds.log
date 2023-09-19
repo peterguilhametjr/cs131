@@ -1,0 +1,42 @@
+  585  mkdir ws4
+  586  cd ws4
+  607  script ws4.txt
+  628  vim ~/.bashrc
+  629  source ~/.bashrc
+  630  l
+  631  w
+  632  ls -ltr
+  633  ls -l | wc
+  634  script ws4.txt
+  635  vim ws4.txt
+  636  mkdir FARE
+  638  cd
+  640  cd taxidata
+  642  head 2019-06.csv
+  644  egrep ',[NY]?,145.0,145.0,' 2019-06.csv | cut -d ',' -f 11 > 145.0-145.0.txt
+  646  head 145.0-145.0.txt
+  647  head 2019-06.csv
+  648  egrep ',[NY]?,262.0,263.0,' 2019-06.csv | cut -d ',' -f 11 > 262.0-263.0.txt
+  689  mv 145.0-145.0.txt ~/ws4/
+  690  mv 262.0-263.0.txt ~/ws4/
+  691  cd
+  693  cd ws4
+  697  sum1=$(paste -sd+ 145.0-145.0.txt | bc)
+  698  echo "sum1: $sum1"
+  699  count1=$(wc -l < 145.0-145.0.txt)
+  700  echo "count1: $count1"
+  701  mean1=$(echo "scale=2; $sum1 / $count1" | bc)
+  702  echo "mean1: $mean1"
+  703  echo "$mean1" >> ws4.txt
+  705  vim ws4.txt
+  707  sum2=$(paste -sd+ 262.0-263.0.txt | bc)
+  708  echo "sum2: $sum2"
+  709  count2=$(wc -l < 262.0-263.0.txt)
+  710  echo "count2: $count2"
+  711  mean2=$(echo "scale=2; $sum2 / $count2" | bc)
+  712  echo "mean2: $mean2"
+  713  echo "$mean2" >> ws4.txt
+  714  vim ws4.txt
+  716  mv 145.0-145.0.txt FARE
+  717  mv 262.0-263.0.txt FARE
+  719  history > cmds.log
