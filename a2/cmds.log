@@ -1,0 +1,54 @@
+Task 1: 
+ 1221  cd taxidata
+ 1222  egrep '^[^,]+,"2019-05-11.*' 2019-05.csv | cut -d ',' -f 17 > average_amount.txt
+ 1223  sum=$(paste -sd+ average_amount.txt | bc)
+ 1224  count=$(wc -l < average_amount.txt | bc)
+ 1225  mean=$(echo "scale=2; $sum / $count" | bc)
+ 1226  echo "mean = $mean"
+ 1227  echo "$mean" > a2.txt
+ 1228  vim a2.txt
+
+Task 2:
+ 1230  sort -n average_amount.txt > sorted_average_amount.txt
+ 1231  tail -n 1 sorted_average_amount.txt
+ 1232  tail -n 1 sorted_average_amount.txt >> a2.txt
+ 1233  vim a2.txt
+
+Task 3:
+ 1234  egrep "^[^,]+,[^,]+,[^,]+,([3-9]|[1-9][0-9]+)\.0" 2019-05.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -n 10 >> a2.txt
+ 1235 vim a2.txt
+
+Task 4:
+ 1256  egrep '^[^,]+,"2019-05-20.*' 2019-05.csv | cut -d ',' -f 8 | uniq -c | sort -nr | head -n 1 > poppuID.txt
+ 1257  vim poppuID.txt
+ 1258  sed -E 's/^[0-9]+ //g' poppuID.txt > popularpuID.txt
+ 1272  egrep "^[^,]+,\"2019-05-20.*\",[^,]+,[^,]+,[^,]+,[NY]?,$(cat popularpuID.txt)" 2019-05.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -n 1 >> a2.txt
+ 1273  vim a2.txt
+ 1278  cat poppuID.txt >> a2.txt
+ 1279  vim a2.txt
+
+Task 5:
+ 1283  cut -d ',' -f 8 2019-01.csv > all_puID.txt
+ 1284  cut -d ',' -f 8 2019-02.csv >> all_puID.txt
+ 1285  cut -d ',' -f 8 2019-03.csv >> all_puID.txt
+ 1286  cut -d ',' -f 8 2019-04.csv >> all_puID.txt
+ 1287  cut -d ',' -f 8 2019-05.csv >> all_puID.txt
+ 1288  cut -d ',' -f 8 2019-06.csv >> all_puID.txt
+ 1289  cut -d ',' -f 8 2019-07.csv >> all_puID.txt
+ 1290  cut -d ',' -f 8 2019-08.csv >> all_puID.txt
+ 1291  cut -d ',' -f 8 2019-09.csv >> all_puID.txt
+ 1292  cut -d ',' -f 8 2019-10.csv >> all_puID.txt
+ 1293  cut -d ',' -f 8 2019-11.csv >> all_puID.txt
+ 1294  cut -d ',' -f 8 2019-12.csv >> all_puID.txt
+ 1295  wc -l all_puID.txt
+ 1296  sort all_puID.txt | uniq -c | sort -nr | head -n 1 >> a2.txt
+ 1297  vim a2.txt
+
+Moving around files and generating cmds.log:
+ 1298  mv a2.txt ~/
+ 1299  cd
+ 1300  ls
+ 1301  mkdir a2
+ 1302  mv a2.txt a2
+ 1303  cd a2
+ 1312  history > cmds.log

@@ -1,0 +1,27 @@
+wc -l 1.0.txt > ws5.txt:
+13665 1.0.txt
+
+wc -l 3.0.txt >> ws5.txt:
+0 because 3.0 isn't in the top 100 most frequent drop off locations based off of the 234.0 pick up location
+
+wc -l 48.0.txt >> ws5.txt:
+178219 48.0.txt
+
+wc -l 223.0.txt >> ws5.txt:
+12095 223.0.txt
+
+
+
+
+
+My for loop on the bash shell:
+mkdir -p "ws5/do234"
+
+for num in $(cat sortdoID.txt)
+do
+        filter=",[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[NY]?,[^,]+,$num,"
+        grep -E "$filter" 2019-08.csv > ws5/do234/"$num".txt
+done
+
+echo "ws5 script finished running"
+

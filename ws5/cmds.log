@@ -1,0 +1,17 @@
+Task 1 (writing a foorl loop in bash shell):
+ 1175  cd taxidata
+ 1176  vim ~/.bashrc
+ 1177  source ~/.bashrc
+
+Task 2 (number of entries in each requested file using wc):
+ 1178  cd ws5/do234
+ 1179  wc -l 1.0.txt > ws5.txt
+ 1180  wc -l 3.0.txt >> ws5.txt
+ 1181  wc -l 48.0.txt >> ws5.txt
+ 1182  wc -l 223.0.txt >> ws5.txt
+ 1183  vim ws5.txt
+
+Moving files:
+ 1184  mv ws5.txt ~/
+ 1185  cd
+ 1194  history > cmds.log

@@ -1,0 +1,26 @@
+task 1:
+17.86
+
+task 2:
+1309.8
+
+task 3:
+39909 236.0
+37140 237.0
+36990 161.0
+33678 230.0
+28506 170.0
+27895 162.0
+27485 48.0
+26782 142.0
+25051 239.0
+24609 234.0
+
+task4:
+most popular pickup location on May 20, 2019:
+12 260.0
+most popular dropoff location on May 20, 2019, with 260.0 as the most popular pickup location:
+18 260.0
+
+task5:
+3641682 237.0
