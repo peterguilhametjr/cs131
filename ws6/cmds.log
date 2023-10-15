@@ -1,0 +1,34 @@
+Make the ws6 directory and change to taxidata directory:
+ 1002  mkdir ws6
+ 1003  cd ws6
+ 1004  cd
+ 1005  cd taxidata
+ 1006  ls
+
+Task 1:
+ 1007  head -10 2019-11.csv
+ 1008  sed -n '/^2.0,/p' 2019-11.csv > vendor2.csv
+ 1009  head -10 vendor2.csv
+
+Task 2:
+ 1019  sed 's/://g' 2019-11.csv | sed 's/\"//g' | sed 's/-//g' > no-separators.csv
+ 1020  head -20 no-separators.csv
+ 1021  ls
+
+Task 3:
+ 1023  sed 's/\.[0-9]*//g' no-separators.csv > no-fractions.csv
+ 1024  head -20 no-fractions.csv
+
+Moving files for documentation:
+ 1025  wc vendor2.csv > ws6.txt
+ 1026  head -10 no-separators.csv >> ws6.txt
+ 1027  vim ws6.txt
+ 1028  head -10 no-fractions.csv >> ws6.txt
+ 1029  vim ws6.txt
+ 1030  mv ws6.txt ~/
+ 1031  cd
+ 1033  mv ws6.txt ws6
+ 1036  cd ws6
+ 1037  vim ws6.txt
+ 1038  history > cmds.log
+ 1039  vim cmds.log
