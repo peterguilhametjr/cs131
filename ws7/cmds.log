@@ -1,0 +1,1000 @@
+   17  ls /proc/ | grep mem
+   18  ls /proc/ | grep cpu
+   19  cd /proc/
+   20  ls
+   21  grep cpu
+   22  ls grep cpu
+   23  ls | grep cpu
+   24  ls | grep mem
+   25  head meminfo
+   26  tail meminfo
+   27  cat meminfo
+   28  head cpuinfo
+   29  cat cpuinfo
+   30  cpuinfo tail
+   31  tail cpuinfo
+   32  cat /proc/cpuinfo | grep "model name" | head -1
+   33  cat cpuinfo | grep "model name" | head -1
+   34  cd ..
+   35  cd
+   36  ls
+   37  cd a1
+   38  ls
+   39  cd /etc/
+   40  ls
+   41  cat os-release
+   42  ls -l os-release
+   43  cd ..
+   44  cd
+   45  ls
+   46  cd a1
+   47  ls
+   48  history > cmds.log
+   49  vim a1.txt
+   50  vim cmds.log
+   51  ls
+   52  vim a1.txt
+   53  vim cmds.log
+   54  cd
+   55  ls
+   56  git status
+   57  git add a1/
+   58  cd a1
+   59  ls
+   60  rmdir temp
+   61  rm -r temp
+   62  cd temp
+   63  chmod u+x temp
+   64  chmod u+x temp2
+   65  chmod u+x temp3
+   66  cd
+   67  git add a1/
+   68  git status
+   69  git commit -m "a1 commit"
+   70  git push -u origin master
+   71  vim ~/.bashrc
+   72  ls
+   73  ls
+   74  mkdir ws4
+   75  cd ws4
+   76  script ws4.txt
+   77  ls
+   78  vim ws4.txt
+   79  ls
+   80  rm ws4.txt
+   81  vim ~/.bashrc
+   82  source ~/.bashrc
+   83  l
+   84  ls -ltr
+   85  cd
+   86  ls
+   87  cd ws4
+   88  vim ~/.bashrc
+   89  l
+   90  w
+   91  l
+   92  w
+   93  ls -ltr
+   94  ls -l | wc
+   95  ls
+   96  cd ws4
+   97  ls
+   98  script ws4.txt
+   99  ls
+  100  rm ws4.txt
+  101  vim ~/.bashrc
+  102  script ws4.txt
+  103  ls
+  104  rm ws4.txt
+  105  vim ~/.bashrc
+  106  l
+  107  vim ~/.bashrc
+  108  l
+  109  w
+  110  ls -ltr
+  111  vim ~/.bashrc
+  112  l
+  113  ls -l | wc
+  114  ls
+  115  ls -l|wc
+  116  l
+  117  vim ~/.bashrc
+  118  l
+  119  vim ~/.bashrc
+  120  source ~/.bashrc
+  121  l
+  122  w
+  123  vim ~/.bashrc
+  124  source ~/.bashrc
+  125  l
+  126  w
+  127  ls -ltr
+  128  ls -l | wc
+  129  script ws4.txt
+  130  vim ws4.txt
+  131  mkdir FARE
+  132  ls
+  133  cd
+  134  ls
+  135  cd taxidata
+  136  ls
+  137  head 2019-06.csv
+  138  vim 2019-06.csv
+  139  egrep ',[NY]?,145.0,145.0,' 2019-06.csv | cut -d ',' -f 11 > 145.0-145.0.txt
+  140  ls
+  141  head 145.0-145.0.txt
+  142  head 2019-06.csv
+  143  egrep ',[NY]?,262.0,263.0,' 2019-06.csv | cut -d ',' -f 11 > 262.0-263.0.txt
+  144  head 262.0-263.txt
+  145  head 262.0-263.0.txt
+  146  ls
+  147  sum1=$(awk '{ sum += $1 } END {}' 145.0-145.0.txt)
+  148  echo $sum1
+  149  echo "the sum for sum1 is: $sum"
+  150  head 145.0-145.0.txt
+  151  sum=$(awk '{ sum += $1 } END { print sum }' values.txt)
+  152  echo "The sum is: $sum"
+  153  sum=$(awk '{ sum += $1 } END { print sum }' 145.0-145.0.txt)
+  154  echo "The sum is: $sum"
+  155  sum1=$(paste -sd+ 145.0-145.0.txt | bc)
+  156  echo "The sum is: $sum1"
+  157  count=$(wc -l 145.0-145.0.txt)
+  158  count1=$(wc -l 145.0-145.0.txt)
+  159  echo "count1 is: $count1"
+  160  mean=$(echo "scale=2; $sum1 / $count1 | bc)
+  161  echo $mean
+  162  mean=$(echo "scale=2; $sum1 / $count1" | bc)
+  163  mean=$(echo "$sum1 / $count1" | bc)
+  164  echo "mean: $mean"
+  165  mean=$(echo "$sum1 / $cmean=$(echo "$sum1 / $count1" | bc)ount1" | bc)
+  166  mean1=$(echo "scale=2; $sum1 / $count1" | bc)
+  167  echo "scale=2; $sum1 / $count1" | bc
+  168  count1=$(wc -l < 145.0-145.0.txt)
+  169  echo "count1: $count1"
+  170  mean1=$(echo "scale=2; $sum1 / $count1" | bc)
+  171  echo "mean1: $mean1"
+  172  echo "$mean1" > mean1.txt
+  173  ls
+  174  vim mean1.txt
+  175  mv mean1.txt ~/ws4/
+  176  sum2=$(paste -sd+ 262.0-263.0.txt | bc)
+  177  count2=$(wc -l < 262.0-263.0.txt)
+  178  echo "sum2: $sum2"
+  179  echo "count2: $count2"
+  180  mean2=$(echo "scale=2; $sum2 / $count2" | bc)
+  181  echo "mean2: $mean2"
+  182  echo "$mean2" > mean2.txt
+  183  vim mean2.txt
+  184  mv 145.0-145.0.txt ~/ws4/
+  185  mv 262.0-263.0.txt ~/ws4/
+  186  cd
+  187  ls
+  188  cd ws4
+  189  ls
+  190  rm mean1.txt
+  191  ls
+  192  sum1=$(paste -sd+ 145.0-145.0.txt | bc)
+  193  echo "sum1: $sum1"
+  194  count1=$(wc -l < 145.0-145.0.txt)
+  195  echo "count1: $count1"
+  196  mean1=$(echo "scale=2; $sum1 / $count1" | bc)
+  197  echo "mean1: $mean1"
+  198  echo "$mean1" >> ws4.txt
+  199  ls
+  200  vim ws4.txt
+  201  ls
+  202  sum2=$(paste -sd+ 262.0-263.0.txt | bc)
+  203  echo "sum2: $sum2"
+  204  count2=$(wc -l < 262.0-263.0.txt)
+  205  echo "count2: $count2"
+  206  mean2=$(echo "scale=2; $sum2 / $count2" | bc)
+  207  echo "mean2: $mean2"
+  208  echo "$mean2" >> ws4.txt
+  209  vim ws4.txt
+  210  ls
+  211  mv 145.0-145.0.txt FARE
+  212  mv 262.0-263.0.txt FARE
+  213  ls
+  214  history > cmds.log
+  215  ls
+  216  cd ws4.txt
+  217  vim ws4.txt
+  218  vim cmds.log
+  219  ls
+  220  cd ws4
+  221  ls
+  222  vim cmds.log
+  223  ls
+  224  cd FFARE
+  225  cd FARE
+  226  ls
+  227  cd ..
+  228  cd
+  229  git status
+  230  git add ws4/
+  231  git status
+  232  git commit -m "ws4 commit"
+  233  git push -u origin master
+  234  git status
+  235  vim ~/.bashrc
+  236  ls
+  237  cd taxidata
+  238  ls
+  239  ws5forloop
+  240  ws5for
+  241  vim ~/.bashrc
+  242  cd
+  243  source ~/.bashrc
+  244  ls
+  245  cd taxidata
+  246  ws5forloop
+  247  cd cs131/ws5/do234
+  248  cd
+  249  ls
+  250  cd ws5
+  251  ls
+  252  cd do234
+  253  ls
+  254  vim ~/.bashrc
+  255  ws5forloop
+  256  ls
+  257  cd
+  258  ls
+  259  vim ~/.bashrc
+  260  ws5forloop
+  261  cd taxidata
+  262  ls
+  263  source ~/.bashrc
+  264  cd
+  265  ws5forloop
+  266  cd taxidata
+  267  ls
+  268  ws5forloop
+  269  cd
+  270  ls
+  271  cd ws5
+  272  ls
+  273  cd do234
+  274  ls
+  275  cd
+  276  vim ~/.bashrc
+  277  ls
+  278  cd taxidata
+  279  ws5forloop
+  280  vim ~/.bashrc
+  281  source ~/.bashrc
+  282  ws5forloop
+  283  vim ~/.bashrc
+  284  ls
+  285  cd taxidata
+  286  ls
+  287  vim 2019-08.csv
+  288  cd
+  289  ls
+  290  vim ws4
+  291  cd ws4
+  292  ls
+  293  vim cmds.log
+  294  cd
+  295  mkdir ws5
+  296  cd ws5
+  297  mkdir do234
+  298  ls
+  299  cd
+  300  vim ~/.bashrc
+  301  ls
+  302  vim ~/.bashrc
+  303  script ws5.txt
+  304  ls
+  305  rm ws5.txt
+  306  script ws5.txt
+  307  cd
+  308  ls
+  309  rm ws5.txt
+  310  cd taxidata
+  311  ls
+  312  vim 2019-08.csv
+  313  cd
+  314  ls
+  315  vim ~/.bashrc
+  316  source ~/.bashrc
+  317  cd taxidata
+  318  source ~/.bashrc
+  319  cd
+  320  cd taxidata
+  321  ls
+  322  cd ws5
+  323  ls
+  324  cd do234
+  325  ls
+  326  cd ../
+  327  ls
+  328  rmdir -r 2s5
+  329  rmdir -r ws5
+  330  rm -r ws5
+  331  ls
+  332  source ~/.bashrc
+  333  ls
+  334  cd ws5
+  335  ls
+  336  cd do234
+  337  ls
+  338  cd ../
+  339  vim ~./bashrc
+  340  vim ~/.bashrc
+  341  source ~/.bashrc
+  342  vim ~/.bashrc
+  343  source ~/.bashrc
+  344  vim ~/.bashrc
+  345  ls
+  346  cd ws5
+  347  ls
+  348  cd do234
+  349  ls
+  350  cd ../
+  351  ls
+  352  rm -r ws5
+  353  vim ~/.bashrc
+  354  ls
+  355  source ~/.bashrc
+  356  ls
+  357  cd ws5
+  358  ls
+  359  cd do234
+  360  ls
+  361  vim 1.0.txt
+  362  cd
+  363  ls
+  364  cd taxidata
+  365  ls
+  366  rm -r ws5
+  367  vim ~/.bashrc
+  368  egrep ',[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,234\.0,' 2019-08.csv > sorted_doID.txt
+  369  ls
+  370  vim sorted_doID.txt
+  371  egrep ',[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,234\.0' 2019-08.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -100 > sort_doID.txt
+  372  vim sort_doID.txt
+  373  sed -i 's/^[0-9]* //' sort_doID.txt
+  374  vim sort_doID.txt
+  375  vim ~/.bashrc
+  376  source ~/.bashrc
+  377  ls
+  378  cd ws5
+  379  ls
+  380  cd do234
+  381  ls
+  382  vim ~/.bashrc
+  383  source ~/.bashrc
+  384  ls
+  385  cd
+  386  cd taxidata
+  387  ls
+  388  rm -r ws5
+  389  ls
+  390  source ~/.bashrc
+  391  cd ws5
+  392  ls
+  393  cd do234
+  394  ls
+  395  cd ../
+  396  vim ~/.bashrc
+  397  source ~/.bashrc
+  398  cd ws5/do234
+  399  ls
+  400  cd ../
+  401  rm -r ws5
+  402  vim ~/.bashrc
+  403  ls
+  404  vim sort_doID.txt
+  405  sed 's/^[0-9]\+ //' input.txt > output.txt
+  406  sed 's/^[0-9]\+ //' sort_doID.txt > sortdoID.txt
+  407  ls
+  408  vim sortdoID.txt
+  409  rm sort_doID.txt
+  410  rm sorted_doID.txt
+  411  ls
+  412  vim ~/.bashrc
+  413  source ~/.bashrc
+  414  cd ws5/do234
+  415  ls
+  416  cd ../
+  417  ls
+  418  rm -r ws5
+  419  vim ~/.bashrc
+  420  vim sortdoID.txt
+  421  vim ~/.bashrc
+  422  source ~/.bashrc
+  423  cd ws5/do234
+  424  ls
+  425  cd ../
+  426  rm -r ws5
+  427  vim ~/.bashrc
+  428  source ~/.bashrc
+  429  ls
+  430  rm -r ws5
+  431  vim ~/.bashrc
+  432  source ~/.bashrc
+  433  cd ws5/do234
+  434  ls
+  435  wc -l 1.0.txt
+  436  cd ../
+  437  vim ~/.bashrc
+  438  source ~/.bashrc
+  439  vim ~/.bashrc
+  440  cd ws5/do234
+  441  ls
+  442  wc -l 1.0.txt
+  443  cd ../
+  444  ls
+  445  rm -r ws5
+  446  vim ~/.bashrc
+  447  source ~/.bashrc
+  448  cd ws5/do234
+  449  ls
+  450  wc -l 1.0.txt
+  451  cd ../
+  452  rm -r ws5
+  453  vim ~/.bashrc
+  454  source ~/.bashrc
+  455  cd ws5/do234
+  456  ls
+  457  cd ../
+  458  wc -l 1.0.txt
+  459  cd ws5/do234
+  460  wc -l 1.0.txt
+  461  cd ../
+  462  rm -r ws5
+  463  vim ~/.bashrc
+  464  source ~/.bashrc
+  465  cd ws5/do234
+  466  ls
+  467  wc -l 1.0.txt
+  468  cd ../
+  469  rm -r ws5
+  470  ls
+  471  wc -l sortdoID.txt
+  472  vim ~/.bashrc
+  473  source ~/.bashrc
+  474  cd ws5/do234
+  475  ls
+  476  cd ../
+  477  rm -r ws5
+  478  source ~/.bashrc
+  479  cd ws5/do234
+  480  ls
+  481  wc -l 1.0.txt
+  482  cd ../
+  483  rm -r ws5
+  484  ls
+  485  source ~/.bashrc
+  486  cd ws5/do234
+  487  ls
+  488  wc -l 1.0.txt
+  489  vim ~/.bashrc
+  490  source ~/.bashrc
+  491  cd ws5/do234
+  492  ls
+  493  wc -l 1.0.txt > ws5.txt
+  494  wc -l 3.0.txt >> ws5.txt
+  495  wc -l 48.0.txt >> ws5.txt
+  496  wc -l 223.0.txt >> ws5.txt
+  497  mkdir a1
+  498  mkdir a2
+  499  ls
+  500  cd a2
+  501  ls
+  502  cd
+  503  cd taxidata
+  504  ls
+  505  mv ws5 ~/
+  506  cd
+  507  ls
+  508  cd ws5
+  509  ls
+  510  cd do234
+  511  ls
+  512  cd
+  513  rm -r ws5
+  514  cd taxidata
+  515  ls
+  516  cd ws5/do234
+  517  ls
+  518  cd ../
+  519  ls
+  520  mv ws5 ~/
+  521  cd
+  522  ls
+  523  cd ws5/do234
+  524  ls
+  525  cd
+  526  cd taxidata
+  527  ls
+  528  vim 2019-05.csv
+  529  egrep '^[^,]+,"2019-05-02.*' 2019-05.csv | cut -d ',' -f 17 > average_amount.txt
+  530  vim average_amount.txt
+  531  sum=$(paste -sd+ average_amount.txt | bc)
+  532  count=$(wc -l < average_amount.txt | bc)
+  533  mean=$(echo "scale=2; $sum / $count" | bc)
+  534  echo "mean = $mean"
+  535  echo "$mean" > a2.txt
+  536  ls
+  537  vim a2.txt
+  538  cd
+  539  cd ws5
+  540  cd do234
+  541  ls
+  542  vim 3.0.txt
+  543  rm 3.0.txt
+  544  vim 223.0.txt
+  545  wc -l 3.0.txt
+  546  wc -l 1.0.txt
+  547  wc -l 48.0.txt
+  548  cd
+  549  cd taxidata
+  550  vim ~/.bashrc
+  551  ls
+  552  wc -l srotdoID.txt
+  553  wc -l sortdoID.txt
+  554  wc -l 2019-08.csv
+  555  vim ~/.bashrc
+  556  source ~/.bashrc
+  557  vim ~/.bashrc
+  558  source ~/.bashrc
+  559  cd ws5/do234
+  560  ls
+  561  cd ../
+  562  vim ~/.bashrc
+  563  ls
+  564  rm -r ws5
+  565  source ~/.bashrc
+  566  cd ws5/do234
+  567  ls
+  568  wc -l 1.0.txt
+  569  vim 1.0.txt
+  570  vim ~/.bashrc
+  571  ls
+  572  cd ../
+  573  rm -r ws5
+  574  ls
+  575  vim 2019-08.csv
+  576  source ~/.bashrc
+  577  rm -r ws5
+  578  vim ~/.bashrc
+  579  source ~/.bashrc
+  580  cd ws5/do234
+  581  ls
+  582  wc -l 1.0.txt
+  583  vim 1.0.txt
+  584  vim ~/.bashrc
+  585  cd ../
+  586  rm -r ws5
+  587  source ~/.bashrc
+  588  cd ws5/do234
+  589  ls
+  590  wc -l 1.0.txt
+  591  vim 1.0.txt
+  592  cd
+  593  rm -r ws5
+  594  vim ~/.bashrc
+  595  ls
+  596  cd taxidata
+  597  source ~/.bashrc
+  598  cd ws5/do234
+  599  ls
+  600  wc -l 1.0.txt
+  601  vim 1.0.txt
+  602  cd ../
+  603  rm -r ws5
+  604  vim ~/.bashrc
+  605  source ~/.bashrc
+  606  cd ws5/do234
+  607  ls
+  608  wc -l 1.0.txt
+  609  vim 1.0.txt
+  610  cd ../
+  611  rm -r ws5
+  612  vim ~/.bashrc
+  613  source ~/.bashrc
+  614  cd ws5/do234
+  615  wc -l 1.0.txt
+  616  cd
+  617  cd taxidata
+  618  rm -r ws5
+  619  script ws5.txt
+  620  vim ws5.txt
+  621  rm -r ws5.txt
+  622  ls
+  623  cd ws5
+  624  cd do234
+  625  ls
+  626  rm -r ws5.txt
+  627  wc -l 1.0.txt > ws5.txt
+  628  wc -l 3.0.txt >> ws5.txt
+  629  wc -l 48.0.txt >> ws5.txt
+  630  wc -l 223.0.txt >> ws5.txt
+  631  vim ws5.txt
+  632  mv ws5 ~/
+  633  mv ws5.txt ~/
+  634  cd
+  635  ls
+  636  mkdir ws5
+  637  mv ws5.txt ws5
+  638  ls
+  639  cd ws5
+  640  ls
+  641  mv ws5.txt ~/
+  642  cd
+  643  ls
+  644  rmdir ws5
+  645  cd taxidata
+  646  mv ws5 ~/
+  647  cd
+  648  ls
+  649  mv ws5.txt ws5
+  650  cd ws5
+  651  ls
+  652  cd do234
+  653  ls
+  654  cd ../
+  655  cd
+  656  ls
+  657  cd ws5
+  658  ls
+  659  mv ws5 ~/
+  660  mv ws5.txt ~/
+  661  cd
+  662  ls
+  663  history > cmds.log
+  664  ls
+  665  vim cmds.log
+  666  cd taxidata
+  667  ls
+  668  cd
+  669  rm -r ws5
+  670  rm -r ws5.txt
+  671  ls
+  672  cd taxidata
+  673  vim ~/.bashrc
+  674  source ~/.bashrc
+  675  cd ws5/do234
+  676  wc -l 1.0.txt > ws5.txt
+  677  wc -l 3.0.txt >> ws5.txt
+  678  wc -l 48.0.txt >> ws5.txt
+  679  wc -l 223.0.txt >> ws5.txt
+  680  vim ws5.txt
+  681  mv ws5.txt ~/
+  682  cd
+  683  ls
+  684  history > cmds.log
+  685  ls
+  686  vim cmds.log
+  687  rm -r cmds.log
+  688  history > cmds.log
+  689  vim cmds.log
+  690  rm cmds.log
+  691  history > cmds.log
+  692  vim cmds.log
+  693  ls
+  694  rm -r a2
+  695  cd taxidata
+  696  ls
+  697  egrep '^[^,]+,"2019-05-02.*' 2019-05.csv | cut -d ',' -f 17 > average_amount.txt
+  698  rm -r average_amount.txt
+  699  ls
+  700  mv ws5 ~/
+  701  egrep '^[^,]+,"2019-05-02.*' 2019-05.csv | cut -d ',' -f 17 > average_amount.txt
+  702  sum=$(paste -sd+ average_amount.txt | bc)
+  703  count=$(wc -l < average_amount.txt | bc)
+  704  mean=$(echo "scale=2; $sum / $count" | bc)
+  705  echo "mean = $mean"
+  706  echo "$mean" > a2.txt
+  707  vim a2.txt
+  708  wc -l average_amount.txt
+  709  sort -n average_amount.txt > sorted_average_amount.txt
+  710  head -n 1 sorted_average_amount.txt
+  711  tail -n 1 sorted_average_amount.txt
+  712  tail -n 1 sorted_average_amount.txt >> a2.txt
+  713  vim a2.txt
+  714  vim 2019-05.csv
+  715  egrep "^[^,]+,[^,]+,[^,]+,([3-9]|[1-9][0-9]+)\.0" 2019-05.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -n 10 >> a2.txt
+  716  vim a2.txt
+  717  rm average_amount.txt
+  718  rm a2.txt
+  719  egrep '^[^,]+,"2019-05-11.*' 2019-05.csv | cut -d ',' -f 17 > average_amount.txt
+  720  sum=$(paste -sd+ average_amount.txt | bc)
+  721  count=$(wc -l < average_amount.txt | bc)
+  722  mean=$(echo "scale=2; $sum / $count" | bc)
+  723  echo "mean = $mean"
+  724  echo "$mean" > a2.txt
+  725  vim a2.txt
+  726  rm sorted_average_amount.txt
+  727  sort -n average_amount.txt > sorted_average_amount.txt
+  728  tail -n 1 sorted_average_amount.txt
+  729  tail -n 1 sorted_average_amount.txt >> a2.txt
+  730  vim a2.txt
+  731  egrep "^[^,]+,[^,]+,[^,]+,[^,]+," 2019-05.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -n 10 >> a2.txt
+  732  vim a2.txt
+  733  vim 2019-05.csv
+  734  egrep '^[^,]+,"2019-05-20.*' 2019-05.csv | cut -d ',' -f 9 | uniq -c | sort -nr | head -n 1 > poppuID.txt 
+  735  rm -r poppuID.txt
+  736  egrep '^[^,]+,"2019-05-20.*' 2019-05.csv | cut -d ',' -f 8 | uniq -c | sort -nr | head -n 1 > poppuID.txt 
+  737  vim poppuID.txt
+  738  vim 2019-05.csv
+  739  vim poppuID.txt
+  740  sed -E 's/^[0-9]+ //g' input.txt > output.txt
+  741  sed -E 's/^[0-9]+ //g' poppuID.txt > popularpuID.txt
+  742  vim popularpuID.txt
+  743  rm popularpuID.txt
+  744  vim poppuID.txt
+  745  sed -E 's/^[0-9]+ //g' poppuID.txt[BID.txt > popularpuID.txt
+  746  ls
+  747  vim popularpuID.txt
+  748  rm popularpuID.txt
+  749  vim popuID.txt
+  750  vim poppuID.txt
+  751  sed -E 's/^[0-9]+ //g' poppuID.txt > popularpuID.txt
+  752  vim popularpuID.txt
+  753  cat popularputID.txt
+  754  cat popularpuID.txt
+  755  egrep '^[^,]+,"2019-05-20.*' 2019-05.csv | cut -d ',' -f 8 | uniq -c | sort -nr | head -n 1 > poppuID.txt
+  756  vim poppuID.txt
+  757  egrep '^[^,]+,"2019-05-20.*",[^,]+,[^,]+,[^,]+,[NY]?,$(cat popularpuID.txt)' 2019-05.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -n 1 >> a2.txt
+  758  vim a2.txt
+  759  egrep '^[^,]+,"2019-05-20.*",[^,]+,[^,]+,[^,]+,[NY]?,$(cat popularpuID.txt)' 2019-05.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -n 1 > testing.txt
+  760  vim testing.txt
+  761  rm testing.txt
+  762  egrep '^[^,]+,"2019-05-20.*",[^,]+,[^,]+,[^,]+,[NY]?,$(cat popularpuID.txt)' 2019-05.csv > testing.txt
+  763  vim testing.txt
+  764  rm testing.txt
+  765  ls
+  766  egrep "^[^,]+,\"2019-05-20.*\",[^,]+,[^,]+,[^,]+,[NY]?,$(cat popularpuID.txt)" 2019-05.csv > testing.txt
+  767  vim testing.txt
+  768  egrep "^[^,]+,\"2019-05-20.*\",[^,]+,[^,]+,[^,]+,[NY]?,$(cat popularpuID.txt)" 2019-05.csv | cut -d ',' -ff 9 | sort | uniq -c | sort -nr | head -n 1 >> a2.txt
+  769  egrep "^[^,]+,\"2019-05-20.*\",[^,]+,[^,]+,[^,]+,[NY]?,$(cat popularpuID.txt)" 2019-05.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -n 1 >> a2.txt
+  770  vim a2.txt
+  771  ls
+  772  vim popuID.txt
+  773  rm popuID.txt
+  774  vim poppuID.txt
+  775  cat poppuID.txt >> a2.txt
+  776  vim a2.txt
+  777  ls
+  778  egrep "^[^,]+,\"2019" 2019-05.csv | cut -d ',' -f 9 | sort | uniq -c | sort -nr | head -n 1 > popular_year.txt
+  779  rm popular_year.txt
+  780  cut -d ',' -f 8 2019-01.csv > all_puID.txt
+  781  cut -d ',' -f 8 2019-02.csv >> all_puID.txt
+  782  cut -d ',' -f 8 2019-03.csv >> all_puID.txt
+  783  cut -d ',' -f 8 2019-04.csv >> all_puID.txt
+  784  cut -d ',' -f 8 2019-05.csv >> all_puID.txt
+  785  cut -d ',' -f 8 2019-06.csv >> all_puID.txt
+  786  cut -d ',' -f 8 2019-07.csv >> all_puID.txt
+  787  cut -d ',' -f 8 2019-08.csv >> all_puID.txt
+  788  cut -d ',' -f 8 2019-09.csv >> all_puID.txt
+  789  cut -d ',' -f 8 2019-10.csv >> all_puID.txt
+  790  cut -d ',' -f 8 2019-11.csv >> all_puID.txt
+  791  cut -d ',' -f 8 2019-12.csv >> all_puID.txt
+  792  wc -l all_puID.txt
+  793  sort all_puID.txt | uniq -c | sort -nr | head -n 1 >> a2.txt
+  794  vim a2.txt
+  795  mv a2.txt ~/
+  796  cd
+  797  ls
+  798  mkdir a2
+  799  mv a2.txt a2
+  800  cd a2
+  801  history > cmds.log
+  802  vim cmds.log
+  803  s
+  804  ls
+  805  rm cmds.log
+  806  history > cmds.log
+  807  vim cmds.log
+  808  rm cmds.log
+  809  history > cmds.log
+  810  vim cmds.log
+  811  ls
+  812  cd
+  813  cd taxidata
+  814  ls
+  815  cd
+  816  cd a2
+  817  ls
+  818  vim cmds.log
+  819  cd
+  820  cd taxidata
+  821  mv average_amount.txt ~/
+  822  mv sorted_average_amount.txt ~/
+  823  mv poppuID.txt ~/
+  824  mv popularpuID.txt ~/
+  825  mv all_putID.txt ~/
+  826  mv all_puID.txt ~/
+  827  cd
+  828  ls
+  829  mv all_putID.txt a2
+  830  mv all_puID.txt a2
+  831  mv average_amount.txt a2
+  832  mv poppuID.txt a2
+  833  mv popularpuID.txt a2
+  834  mv sorted_average_amount.txt a2
+  835  ls
+  836  cd a2
+  837  ls
+  838  mkdir helper_files
+  839  mv all_puID.txt helper_files
+  840  mv average_amount.txt helper_files
+  841  mv poppuID.txt helper_file
+  842  mv popularpuID.txt helper_file
+  843  mv sorted_average_amount.txt helper_file
+  844  ls
+  845  cd helper_file
+  846  vim helper_file
+  847  cat poppuID.txt
+  848  wc -l helper_file
+  849  rm helper_file
+  850  d
+  851  cd
+  852  cd taxidata
+  853  ls
+  854  cd
+  855  cd a2
+  856  cd helper_files
+  857  ls
+  858  sort -n average_amount.txt > sorted_average_amount.txt
+  859  ls
+  860  cd ../
+  861  vim cmds.log
+  862  cd
+  863  cd taxidata
+  864  egrep '^[^,]+,"2019-05-20.*' 2019-05.csv | cut -d ',' -f 8 | uniq -c | sort -nr | head -n 1 > poppuID.txt
+  865  sed -E 's/^[0-9]+ //g' poppuID.txt > popularpuID.txt
+  866  rm popularpuID.txt
+  867  vim poppuID.txt
+  868  sed -E 's/^[0-9]+ //g' poppuID.txt > popularpuID.txt
+  869  vim popularpuID.txt
+  870  mv poppuID.txt ~/
+  871  mv popularpuID.txt ~/
+  872  cd
+  873  mv poppuID.txt a2
+  874  mv popularpuID.txt a2
+  875  cd a2
+  876  ls
+  877  mv poppuID.txt helper_files
+  878  mv popularpuID.txt helper_files
+  879  ls
+  880  vim helper_files
+  881  ls
+  882  cd helper_files
+  883  ls
+  884  cd ../
+  885  ls
+  886  cd ../
+  887  ls
+  888  vim cmds.log
+  889  ls
+  890  mv cmds.log ws5
+  891  mv ws5.txt ws5
+  892  ls
+  893  cd ws5
+  894  ls
+  895  vim ~/.bashrc
+  896  vim ws5.txt
+  897  cd
+  898  ls
+  899  git status
+  900  git add ws5/
+  901  git status
+  902  git add a2/
+  903  git status
+  904  git commit -m "a2 & ws5 commit"
+  905  git push origin master
+  906  ls
+  907  git status
+  908  git push
+  909  git pull
+  910  git status
+  911  git reset HEAD~1
+  912  git status
+  913  cd a2
+  914  ls
+  915  rm -r helper_files
+  916  ls
+  917  cd
+  918  cd ws5
+  919  ls
+  920  rm -r do234
+  921  ls
+  922  cd
+  923  git status
+  924  git add a2/
+  925  git add ws5/
+  926  git status
+  927  git commit -m "ws5 & a2"
+  928  git push origin master
+  929  mkdir cs131
+  930  ls
+  931  cd cs131
+  932  ls
+  933  cd
+  934  cd taxidata
+  935  vim script
+  936  ls
+  937  mkdir 1011
+  938  cd 1011
+  939  vim script
+  940  awk -f script -v num=100
+  941  ls
+  942  mkdir ws6
+  943  cd ws6
+  944  cd
+  945  cd taxidata
+  946  ls
+  947  head -10 2019-11.csv
+  948  sed -n '/^2.0,/p' 2019-11.csv > vendor2.csv
+  949  head -10 vendor2.csv
+  950  sed '/:/d' 2019-11.csv | sed '/\"/d' | sed '/-/d' > no-separators.csv
+  951  cat -10 no-separators.csv
+  952  head -10 no-separators.csv
+  953  head -20 no-separators.csv
+  954  vim no-separators.csv
+  955  rm no-separators.csv
+  956  sed 's/://' 2019-11.csv | sed 's/\"//' | sed 's/-//' > no-separators.csv
+  957  head -20 no-separators.csv
+  958  rm no-separators.csv
+  959  sed 's/://g' 2019-11.csv | sed 's/\"//g' | sed 's/-//g' > no-separators.csv
+  960  head -20 no-separators.csv
+  961  ls
+  962  wc -l vendor2.csv
+  963  sed 's/\.[0-9]*//g' no-separators.csv > no-fractions.csv
+  964  head -20 no-fractions.csv
+  965  wc vendor2.csv > ws6.txt
+  966  head -10 no-separators.csv >> ws6.txt
+  967  vim ws6.txt
+  968  head -10 no-fractions.csv >> ws6.txt
+  969  vim ws6.txt
+  970  mv ws6.txt ~/
+  971  cd
+  972  ls
+  973  mv ws6.txt ws6
+  974  ls
+  975  cd ws
+  976  cd ws6
+  977  vim ws6.txt
+  978  history > cmds.log
+  979  vim cmds.log
+  980  rm cmds.log
+  981  history > cmds.log
+  982  vim cmds.log
+  983  rm cmds.log
+  984  history > cmds.log
+  985  vim cmds.log
+  986  rm cmds.log
+  987  history > cmds.log
+  988  vim cmds.log
+  989  ls
+  990  cd
+  991  git status
+  992  git add ws6/
+  993  git status
+  994  git commit -m "ws6 commit"
+  995  git push -u origin master
+  996  mkdir ws7
+  997  ls
+  998  cd taxidata
+  999  ls
+ 1000  head -10 2019-12.csv
+ 1001  cd taxidata
+ 1002  ls
+ 1003  rm results.txt
+ 1004  awk -F,',' 'NR > 1 && $18 >= 10.0 { tips[$14]++ } END { for (t in tips) { print t, tips[t] } }' 2019-12.csv > results.txt
+ 1005  vim results.txt
+ 1006  rm results.txt
+ 1007  head -10 2019-12.csv
+ 1008  awk -F 'BEGIN { FS="," } {NR > 1 && $18 >= 10.0  { tips[$14]++ } } END { for (t in tips) { print t, tips[t] } }' 2019-12.csv > results.txt
+ 1009  head -10 results.txt
+ 1010  vim results.txt
+ 1011  awk -F',' 'NR > 1 && $17 >= 10.0  { tips[$14]++ } END { for (t in tips) { print t, tips[t] } }' 2019-12.csv > results.txt
+ 1012  head -10 results.txt
+ 1013  wc -l results.txt
+ 1014  cat results.txt | sort -k2nr | head -20 > ws7.txt
+ 1015  cat ws7.txt
+ 1016  history > cmds.log
