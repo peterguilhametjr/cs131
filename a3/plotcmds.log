@@ -1,0 +1,54 @@
+a3t3.plt file:
+
+set boxwidth 0.5 absolute
+set style fill solid 1.0 
+set style histogram 
+
+set datafile separator ' '
+
+set terminal svg
+set out 'a3t3.svg'
+
+set title "The Average Tip Amount of Passengers Throughout August 2019"
+set xlabel "# of Passengers"
+set ylabel "Tip Amount"
+
+set yrange[0:10]
+
+plot 'a3t3.dat' using 1:2:xtic(1) with boxes lc rgb 'gray' title "tip amount based on # of passengers"
+
+
+
+
+
+a3t4.plt file:
+
+#!/usr/local/bin/gnuplot -persist
+set style fill transparent solid 0.2 noborder
+
+set datafile separator ' '
+
+set terminal svg
+set out 'a3t4.svg'
+
+#set dummy u, v
+#set key fixed right top vertical Right noreverse enhanced #autotitle box lt black linewidth 1.000 dashtype solid
+#set parametric
+set title "Average Total Amount Based On Same Distance" 
+set xlabel "Distance"
+set ylabel "Total Amount"
+#set colorbox vertical origin screen 0.9, 0.2 size screen 0.05, 0.6 front  noinvert bdefault
+NO_ANIMATION = 1
+set autoscale x
+set autoscale y
+## Last datafile plotted: "hemisphr.dat"
+plot 'a3t4.dat' using 1:2 with circles lc rgb 'red'
+
+
+
+
+
+gnuplot commands:
+
+load 'a3t3.plt'
+load 'a3t4.plt'

@@ -1,0 +1,50 @@
+Task 1: 
+ 1002  cd taxidata
+ 1003  ls
+ 1004  head -10 2019-08.csv
+ 1005  awk -F ',' 'NR > 1 { locations[$8] += $17; counts[$8]++ } END { for (l in locations) { print l, locationss[l] / counts[l] } }' 2019-08.csv > a3_temp.txt
+ 1006  ls
+ 1012  cat a3_temp.txt | sort -k2nr | head -10 > a3.txt
+ 1013  cat a3.txt
+ 1014  vim a3.txt
+
+Task 2:
+ 1015  head -10 2019-08.csv
+ 1033  awk -F ',' 'NR > 1 { location_pair[$8, $9] += $17; counts[$8, $9]++ } END { for (l in location_pair) { print l, location_pair[l] / counts[l] } }' 2019-08.csv > a3_temp2.txt
+ 1036  cat a3_temp2.txt | sort -k2nr | head -1 >> a3.txt
+ 1037  vim a3.txt
+ 1038  head -10 2019-08.csv
+
+Task 3(.dat file):
+ 1039  awk -F ',' 'NR > 1 { passengers[$4] += $14; counts[$4]++ } END { for (p in passengers) { print p, passengers[p] / counts[p] } }' 2019-08.csv > a3t3.dat
+ 1040  head -10 a3t3.dat
+ 1041  vim a3t3.dat
+ 1042  vim 2019-08.csv
+ 1043  cat a3t3.dat
+
+Task 4(.dat file):
+ 1044  awk -F ',' 'NR > 1 { distances[$5] += $17; counts[$5]++ } END { for (d in distances) { print d, distances[d] / counts[d] } }' 2019-08.csv > a3t4.dat
+ 1045  vim a3t4.dat
+ 1046  wc -l a3t4.dat
+ 1050  vim a3t4.dat
+
+Moved .dat files to github so I can access them on my laptop for gnuplot:
+ 1051  git status
+ 1052  ls
+ 1053  cd
+ 1054  git status
+ 1055  ls
+ 1056  cd taxidata
+ 1057  ls
+ 1058  git add a3t4.dat
+ 1059  git add a3t3.dat
+ 1060  git commit -m "commit a3.dat files"
+ 1061  git push -u origin master
+ 1062  ls
+
+Moving Files Around:
+ 1063  mv a3.txt ../
+ 1086  ls
+ 1087  mkdir a3
+ 1088  mv a3.txt a3
+ 1089  cd a3
