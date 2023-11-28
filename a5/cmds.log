@@ -1,0 +1,18 @@
+Make the directory: 
+ 1003  mkdir a5
+ 1004  mv bayarea_boba_spots.csv a5
+ 1005  cd a5
+
+make the script to filter out data
+ 1006  ls
+ 1012  vim boba_script.sh
+ 1013  chmod +x boba_script.sh
+ 1014  ./boba_script.sh
+ 1096  head -10 sorted_boba_spots.csv
+ 1097  wc -l sorted_boba_spots.csv
+ 1120  ls
+
+use awk scripts to filter the data even further for the gnuplots specifically:
+ 1123  awk -F',' 'BEGIN {OFS=","} NR > 1 {print $6, $7}' sorted_boba_spots.csv > lat_long.dat
+ 1124  head -10 lat_long.dat
+ 1126  awk -F',' 'BEGIN {OFS=","} NR > 1 { cities[$5]++ } END { for (city in cities) print city, cities[city] }' sorted_boba_spots.csv > city_counts.dat
